@@ -1,0 +1,36 @@
+###
+GET http://localhost:8080/api/v1/trips
+
+###
+GET http://localhost:8080/api/v1/trips/1
+
+### Create new content
+POST http://localhost:8080/api/v1/trips
+Content-Type: application/json
+
+{
+  "description": "Alacant trip",
+  "status": "COMPLETED",
+  "trip_type": "WORK",
+  "distance": 100,
+  "price": 100.00,
+  "start_date": "2020-05-10",
+  "end_date": "2020-05-12",
+  "URL": ""
+}
+### Update existing content
+PUT http://localhost:8080/api/v1/trips/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "description": "Argentina trip",
+  "status": "COMPLETED",
+  "Type": "Adventure",
+  "start_date": "2023-05-10",
+  "end_date": "2023-05-10",
+  "url": ""}
+
+### Delete existing content
+DELETE http://localhost:8080/api/v1/trips/3
+
