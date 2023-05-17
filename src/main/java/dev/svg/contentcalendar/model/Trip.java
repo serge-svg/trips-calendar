@@ -10,9 +10,11 @@ public record Trip(
         String description,
         //@NotBlank
         //Status status,
+        @NotBlank
         String status,
         //@NotBlank
         //TripType trip_type,
+        @NotBlank
         String trip_type,
         int distance,
         float price,
