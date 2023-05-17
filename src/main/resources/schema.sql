@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS Trips (
     id INTEGER AUTO_INCREMENT,
     description varchar(255) NOT NULL,
-    status varchar(25) NOT NULL,
-    trip_type varchar(25) NOT NULL,
+    status VARCHAR(25) NOT NULL,
+    trip_type VARCHAR(25) NOT NULL,
     distance INT NULL,
     price FLOAT NULL,
     start_date TIMESTAMP NULL,
