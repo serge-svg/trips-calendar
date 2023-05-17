@@ -34,13 +34,13 @@ public class TripsController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    public void create(@RequestBody Trip trip) {
+    public void create(@Valid @RequestBody Trip trip) {
         service.create(trip);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    public void update(@PathVariable Integer id, @RequestBody Trip trip) {
+    public void update(@PathVariable Integer id, @Valid @RequestBody Trip trip) {
         if (!service.getById(id).isPresent()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Trip not found");
         }
