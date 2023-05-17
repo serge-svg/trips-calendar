@@ -25,7 +25,7 @@ Content-Type: application/json
 
 {
   "id": 1,
-  "description": "Trip to the beach2",
+  "description": "Trip to the beach3",
   "status": "COMPLETED",
   "trip_type": "WORK",
   "distance": 100,
