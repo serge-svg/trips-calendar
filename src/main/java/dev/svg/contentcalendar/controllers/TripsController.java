@@ -32,13 +32,11 @@ public class TripsController {
                 .orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND, "Trip not found")));
     }
 
-/*
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     public void create(@RequestBody Trip trip) {
         service.create(trip);
     }
-
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
@@ -48,7 +46,7 @@ public class TripsController {
         }
         service.update(trip);
     }
-*/
+
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")

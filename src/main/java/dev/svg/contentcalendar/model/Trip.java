@@ -8,10 +8,12 @@ public record Trip(
         Integer id,
         @NotBlank
         String description,
-        @NotBlank
-        Status status,
-        @NotBlank
-        TripType trip_type,
+        //@NotBlank
+        //Status status,
+        String status,
+        //@NotBlank
+        //TripType trip_type,
+        String trip_type,
         int distance,
         float price,
         LocalDate start_date,

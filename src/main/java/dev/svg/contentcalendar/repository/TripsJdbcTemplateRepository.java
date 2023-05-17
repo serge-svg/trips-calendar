@@ -24,8 +24,10 @@ public class TripsJdbcTemplateRepository {
     private static Trip mapRow(ResultSet rs, int rowNum) throws SQLException {
         return new Trip(rs.getInt("id"),
                 rs.getString("description"),
-                Status.valueOf(rs.getString("status")),
-                TripType.valueOf(rs.getString("trip_type")),
+                rs.getString("status"),
+                rs.getString("trip_type"),
+                //Status.valueOf(rs.getString("status")),
+                //TripType.valueOf(rs.getString("trip_type")),
                 rs.getInt("distance"),
                 rs.getFloat("price"),
                 rs.getObject("start_date", LocalDate.class),
@@ -42,12 +44,18 @@ public class TripsJdbcTemplateRepository {
         return Optional.of(trip);
     }
 
+    /*
     public void create(String description, Status status, TripType trip_type, int distance, float price, LocalDate start_date, LocalDate end_date, String URL) {
         String sql = "INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date, URL) VALUES (?, ?, ?, ?, NOW(), ?)";
         jdbcTemplate.update(sql, description, status, trip_type, distance, price, start_date, end_date, URL);
     }
+     */
+    public void create(String description, String status, String trip_type, int distance, float price, LocalDate start_date, LocalDate end_date, String URL) {
+        String sql = "INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date, URL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, description, status, trip_type, distance, price, start_date, end_date, URL);
+    }
 
-    public void update(int id, String description, Status status, TripType trip_type, int distance, float price, LocalDate start_date, LocalDate end_date, String URL) {
+    public void update(int id, String description, String status, String trip_type, int distance, float price, LocalDate start_date, LocalDate end_date, String URL) {
         String sql = "UPDATE Trips SET description = ?, status = ?, trip_type = ?, distance = ?, price = ?, start_date = ?, end_date = ?, URL = ? WHERE id = ?";
         jdbcTemplate.update(sql, description, status, trip_type, distance, price, start_date, end_date, URL, id);
     }

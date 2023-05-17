@@ -9,27 +9,31 @@ POST http://localhost:8080/api/v1/trips
 Content-Type: application/json
 
 {
-  "description": "Alacant trip",
+  "description": "Trip to Bali",
   "status": "COMPLETED",
-  "trip_type": "WORK",
+  "trip_type": "BEACH",
   "distance": 100,
-  "price": 100.00,
-  "start_date": "2020-05-10",
-  "end_date": "2020-05-12",
-  "URL": ""
+  "price": 100.0,
+  "start_date": null,
+  "end_date": null,
+  "url": null
 }
+
 ### Update existing content
-PUT http://localhost:8080/api/v1/trips/3
+PUT http://localhost:8080/api/v1/trips/1
 Content-Type: application/json
 
 {
-  "id": 3,
-  "description": "Argentina trip",
+  "id": 1,
+  "description": "Trip to the beach2",
   "status": "COMPLETED",
-  "Type": "Adventure",
-  "start_date": "2023-05-10",
-  "end_date": "2023-05-10",
-  "url": ""}
+  "trip_type": "WORK",
+  "distance": 100,
+  "price": 100.0,
+  "start_date": null,
+  "end_date": null,
+  "url": null
+}
 
 ### Delete existing content
 DELETE http://localhost:8080/api/v1/trips/3
