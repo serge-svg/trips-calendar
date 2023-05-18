@@ -1,6 +1,7 @@
 package dev.svg.contentcalendar.model;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -8,18 +9,13 @@ public record Trip(
         Integer id,
         @NotBlank
         String description,
-        //@NotBlank
-        //Status status,
-        @NotBlank
-        String status,
-        //@NotBlank
-        //TripType trip_type,
-        @NotBlank
-        String trip_type,
+        @NotNull
+        Status status,
+        @NotNull
+        TripType trip_type,
         int distance,
         float price,
         LocalDate start_date,
-        LocalDate end_date,
-        String url
+        LocalDate end_date
 ) {
 }

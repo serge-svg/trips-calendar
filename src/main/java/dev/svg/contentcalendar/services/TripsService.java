@@ -28,12 +28,11 @@ public class TripsService {
     }
 
     public void create(Trip trip) {
-        //repository.create(trip);
-        repository.create(trip.description(), trip.status(), trip.trip_type(), trip.distance(), trip.price(), trip.start_date(), trip.end_date(), trip.url());
+        repository.create(trip);
     }
 
     public void update(Trip trip) {
-        repository.update(trip.id(), trip.description(), trip.status(), trip.trip_type(), trip.distance(), trip.price(), trip.start_date(), trip.end_date(), trip.url());
+        repository.update(trip);
     }
 
     public void delete(Integer id) {
