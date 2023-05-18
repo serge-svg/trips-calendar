@@ -2,7 +2,7 @@
 GET http://localhost:8080/api/v1/trips
 
 ###
-GET http://localhost:8080/api/v1/trips/1
+GET http://localhost:8080/api/v1/trips/4
 
 ### Create new content
 POST http://localhost:8080/api/v1/trips
@@ -15,8 +15,7 @@ Content-Type: application/json
   "distance": 100,
   "price": 100.0,
   "start_date": null,
-  "end_date": null,
-  "url": null
+  "end_date": null
 }
 
 ### Update existing content
@@ -24,15 +23,14 @@ PUT http://localhost:8080/api/v1/trips/1
 Content-Type: application/json
 
 {
-  "id": 1,
-  "description": "Trip to the beach3",
+  "id": 4,
+  "description": "Trip to Bali....",
   "status": "COMPLETED",
-  "trip_type": "WORK",
+  "trip_type": "BEACH",
   "distance": 100,
   "price": 100.0,
   "start_date": null,
-  "end_date": null,
-  "url": null
+  "end_date": null
 }
 
 ### Delete existing content

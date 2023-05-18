@@ -29,8 +29,7 @@ public class TripsJdbcTemplateRepository {
                 rs.getInt("distance"),
                 rs.getFloat("price"),
                 rs.getObject("start_date", LocalDate.class),
-                rs.getObject("end_date", LocalDate.class),
-                rs.getString("url"));
+                rs.getObject("end_date", LocalDate.class));
     }
 
     public List<Trip> findAll() {
@@ -38,19 +37,20 @@ public class TripsJdbcTemplateRepository {
     }
 
     public Optional<Trip> findById(Integer id) {
-        Trip trip = jdbcTemplate.queryForObject("SELECT * FROM trips WHERE id = ?", new Object[]{id}, TripsJdbcTemplateRepository::mapRow);
+        Trip trip = jdbcTemplate.queryForObject("SELECT * FROM Trips WHERE id = ?", new Object[]{id}, TripsJdbcTemplateRepository::mapRow);
         return Optional.of(trip);
     }
 
-    public void create(String description, String status, String trip_type, int distance, float price, LocalDate start_date, LocalDate end_date, String URL) {
-        String sql = "INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date, URL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql, description, status, trip_type, distance, price, start_date, end_date, URL);
+    public void create(Trip trip) {
+        String sql = "INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, trip.description(), trip.status().toString(), trip.trip_type().toString(), trip.distance(), trip.price(), trip.start_date(), trip.end_date());
     }
 
-    public void update(int id, String description, String status, String trip_type, int distance, float price, LocalDate start_date, LocalDate end_date, String URL) {
-        String sql = "UPDATE Trips SET description = ?, status = ?, trip_type = ?, distance = ?, price = ?, start_date = ?, end_date = ?, URL = ? WHERE id = ?";
-        jdbcTemplate.update(sql, description, status, trip_type, distance, price, start_date, end_date, URL, id);
+    public void update(Trip trip) {
+        String sql = "UPDATE Trips SET description = ?, status = ?, trip_type = ?, distance = ?, price = ?, start_date = ?, end_date = ? WHERE id = ?";
+        jdbcTemplate.update(sql, trip.description(), trip.status().toString(), trip.trip_type().toString(), trip.distance(), trip.price(), trip.start_date(), trip.end_date(), trip.id());
     }
+
 
     public void delete(int id) {
         String sql = "DELETE FROM Trips WHERE id = ?";
