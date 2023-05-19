@@ -57,4 +57,15 @@ public class TripsController {
         service.delete(id);
     }
 
+    @GetMapping("/status/{status}")
+    public List<Trip> findByStatus(@PathVariable String status) {
+        return service.findByStatus(status);
+    }
+
+    @GetMapping("/type/{tripType}")
+    public List<Trip> findByTripType (@PathVariable String tripType) {
+        return service.listByTripType(tripType);
+    }
+
+
 }
