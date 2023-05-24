@@ -1,17 +1,15 @@
-package dev.svg.contentcalendar;
+package dev.svg.tripscalendar;
 
-import dev.svg.contentcalendar.model.Status;
-import dev.svg.contentcalendar.model.Trip;
-import dev.svg.contentcalendar.model.TripType;
-import dev.svg.contentcalendar.repository.TripsSDJdbcRepository;
+import dev.svg.tripscalendar.model.Status;
+import dev.svg.tripscalendar.model.Trip;
+import dev.svg.tripscalendar.model.TripType;
+import dev.svg.tripscalendar.repository.TripsSDJdbcRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.time.LocalDate;
 
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "Trips calendar API", version = "1.0", description = "Trips calendar API Information"))

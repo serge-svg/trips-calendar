@@ -1,7 +1,7 @@
-package dev.svg.contentcalendar.controllers;
+package dev.svg.tripscalendar.controllers;
 
-import dev.svg.contentcalendar.model.Trip;
-import dev.svg.contentcalendar.services.TripsService;
+import dev.svg.tripscalendar.model.Trip;
+import dev.svg.tripscalendar.services.TripsService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

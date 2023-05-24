@@ -1,7 +1,6 @@
-package dev.svg.contentcalendar.repository;
+package dev.svg.tripscalendar.repository;
 
-import dev.svg.contentcalendar.model.Trip;
-import dev.svg.contentcalendar.model.TripType;
+import dev.svg.tripscalendar.model.Trip;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.data.repository.query.Param;
