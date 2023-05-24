@@ -1,11 +1,11 @@
 ###
-GET http://localhost:8081/api/v1/trips
+GET http://localhost:8085/api/v1/trips
 
 ###
-GET http://localhost:8081/api/v1/trips/2
+GET http://localhost:8085/api/v1/trips/2
 
 ### Create new content
-POST http://localhost:8081/api/v1/trips
+POST http://localhost:8085/api/v1/trips
 Content-Type: application/json
 
 {
@@ -19,7 +19,7 @@ Content-Type: application/json
   "end_date": null
 }
 ### Update existing content
-PUT http://localhost:8081/api/v1/trips/1
+PUT http://localhost:8085/api/v1/trips/1
 Content-Type: application/json
 
 {
