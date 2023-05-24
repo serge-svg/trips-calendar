@@ -1,6 +1,6 @@
-package dev.svg.contentcalendar.repository;
+package dev.svg.tripscalendar.repository;
 
-import dev.svg.contentcalendar.model.Trip;
+import dev.svg.tripscalendar.model.Trip;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

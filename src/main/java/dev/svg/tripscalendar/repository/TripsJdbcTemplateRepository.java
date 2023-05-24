@@ -1,8 +1,8 @@
-package dev.svg.contentcalendar.repository;
+package dev.svg.tripscalendar.repository;
 
-import dev.svg.contentcalendar.model.Status;
-import dev.svg.contentcalendar.model.Trip;
-import dev.svg.contentcalendar.model.TripType;
+import dev.svg.tripscalendar.model.Status;
+import dev.svg.tripscalendar.model.Trip;
+import dev.svg.tripscalendar.model.TripType;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

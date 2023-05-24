@@ -1,4 +1,4 @@
-package dev.svg.contentcalendar.model;
+package dev.svg.tripscalendar.model;
 
 public enum Status {
     IDEA,

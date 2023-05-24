@@ -1,11 +1,9 @@
-package dev.svg.contentcalendar;
+package dev.svg.tripscalendar;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.sql.*;
 
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "Trips calendar API", version = "1.0", description = "Trips calendar API Information"))
