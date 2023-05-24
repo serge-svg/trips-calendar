@@ -1,8 +1,12 @@
-package dev.svg.contentcalendar.repository;
+package dev.svg.tripscalendar.repository;
 
-import dev.svg.contentcalendar.model.Trip;
+import dev.svg.tripscalendar.model.Status;
+import dev.svg.tripscalendar.model.Trip;
+import dev.svg.tripscalendar.model.TripType;
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -29,25 +33,26 @@ public class TripsCollectionRepository {
         tripsList.removeIf(t -> t.id().equals(id));
     }
 
-    /*
     @PostConstruct
     private void init(){
         tripsList.add(new Trip(1,
                 "First Trip",
                 Status.IDEA,
-                Type.WORK,
+                TripType.WORK,
+                100,
+                1000,
                 LocalDate.now(),
-                null,
-                ""));
+                null));
         tripsList.add(new Trip(2,
                 "Second Trip",
                 Status.IDEA,
-                Type.ADVENTURE,
+                TripType.ADVENTURE,
+                200,
+                2000,
                 LocalDate.now(),
-                null,
-                ""));
+                null));
     }
-    */
+
 
 
 }

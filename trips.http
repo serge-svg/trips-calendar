@@ -1,29 +1,29 @@
 ###
-GET http://localhost:8080/api/v1/trips
+GET http://localhost:8081/api/v1/trips
 
 ###
-GET http://localhost:8080/api/v1/trips/4
+GET http://localhost:8081/api/v1/trips/2
 
 ### Create new content
-POST http://localhost:8080/api/v1/trips
+POST http://localhost:8081/api/v1/trips
 Content-Type: application/json
 
 {
-  "description": "Trip to Bali",
-  "status": "COMPLETED",
-  "trip_type": "BEACH",
-  "distance": 100,
-  "price": 100.0,
-  "start_date": null,
+  "id": 3,
+  "description": "Thrird Trip",
+  "status": "IDEA",
+  "trip_type": "ADVENTURE",
+  "distance": 200,
+  "price": 2000.0,
+  "start_date": "2023-05-24",
   "end_date": null
 }
-
 ### Update existing content
-PUT http://localhost:8080/api/v1/trips/1
+PUT http://localhost:8081/api/v1/trips/1
 Content-Type: application/json
 
 {
-  "id": 4,
+  "id": 3,
   "description": "Trip to Bali....",
   "status": "COMPLETED",
   "trip_type": "BEACH",

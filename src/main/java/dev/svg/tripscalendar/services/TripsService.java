@@ -1,9 +1,8 @@
-package dev.svg.contentcalendar.services;
+package dev.svg.tripscalendar.services;
 
 
-import dev.svg.contentcalendar.model.Status;
-import dev.svg.contentcalendar.model.Trip;
-import dev.svg.contentcalendar.repository.TripsJdbcTemplateRepository;
+import dev.svg.tripscalendar.model.Trip;
+import dev.svg.tripscalendar.repository.TripsCollectionRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,10 +11,9 @@ import java.util.Optional;
 @Service
 public class TripsService {
 
-    //private final TripCollectionRepository repository;
-    private final TripsJdbcTemplateRepository repository;
+    private final TripsCollectionRepository repository;
 
-    public TripsService(TripsJdbcTemplateRepository repository) {
+    public TripsService(TripsCollectionRepository repository) {
         this.repository = repository;
     }
 
@@ -28,15 +26,15 @@ public class TripsService {
     }
 
     public void create(Trip trip) {
-        repository.create(trip);
+        repository.save(trip);
     }
 
     public void update(Trip trip) {
-        repository.update(trip);
+        repository.save(trip);
     }
 
     public void delete(Integer id) {
-        repository.delete(id);
+        repository.deleteById(id);
     }
 
 }

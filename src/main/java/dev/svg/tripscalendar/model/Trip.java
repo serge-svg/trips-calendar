@@ -1,4 +1,4 @@
-package dev.svg.contentcalendar.model;
+package dev.svg.tripscalendar.model;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
