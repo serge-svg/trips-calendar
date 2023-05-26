@@ -4,12 +4,18 @@ GET http://localhost:8080/api/v1/trips
 ###
 GET http://localhost:8080/api/v1/trips/2
 
+###
+GET http://localhost:8080/api/v1/trips/status/COMPLETED
+
+###
+GET http://localhost:8080/api/v1/trips/type/BEACH
+
 ### Create new content
 POST http://localhost:8080/api/v1/trips
 Content-Type: application/json
 
 {
-  "description": "Trip to Bali",
+  "description": "Trip to Bali3",
   "status": "COMPLETED",
   "trip_type": "BEACH",
   "distance": 100,

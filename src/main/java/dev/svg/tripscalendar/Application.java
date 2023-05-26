@@ -1,15 +1,9 @@
 package dev.svg.tripscalendar;
 
-import dev.svg.tripscalendar.model.Status;
-import dev.svg.tripscalendar.model.Trip;
-import dev.svg.tripscalendar.model.TripType;
-import dev.svg.tripscalendar.repository.TripsSDJdbcRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "Trips calendar API", version = "1.0", description = "Trips calendar API Information"))
@@ -18,7 +12,7 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-
+	/*
 	@Bean
 	CommandLineRunner commandLineRunner(TripsSDJdbcRepository repository) {
 		System.out.println("CommandLineRunner------------------------");
@@ -36,7 +30,6 @@ public class Application {
 
 			repository.save(trip);
 		};
-
 	}
-
+	*/
 }

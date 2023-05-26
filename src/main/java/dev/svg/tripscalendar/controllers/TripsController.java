@@ -63,7 +63,7 @@ public class TripsController {
     }
 
     @GetMapping("/type/{tripType}")
-    public List<Trip> findByTripType (@PathVariable String tripType) {
+    public List<Trip> findByTripType(@PathVariable String tripType) {
         return service.listByTripType(tripType);
     }
 

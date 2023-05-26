@@ -10,8 +10,7 @@ CREATE TABLE IF NOT EXISTS Trips (
     PRIMARY KEY (id)
 );
 
-/*
-INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date) VALUES ('Trip to the beach', 'COMPLETED', 'WORK', 100, 100.00, NULL, NULL);
+
+INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date) VALUES ('Trip to the beach', 'IDEA', 'BEACH', 100, 100.00, NULL, NULL);
 INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date) VALUES ('Trip to the mountains', 'COMPLETED', 'WORK', 200, 200.00, NULL, NULL);
-INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date) VALUES ('Trip to the forest', 'COMPLETED', 'WORK', 300, 300.00, NULL, NULL);
- */
+INSERT INTO Trips (description, status, trip_type, distance, price, start_date, end_date) VALUES ('Trip to the forest', 'IN_PROGRESS', 'ADVENTURE', 300, 300.00, NULL, NULL);

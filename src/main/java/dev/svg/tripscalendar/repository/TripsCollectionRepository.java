@@ -29,25 +29,4 @@ public class TripsCollectionRepository {
         tripsList.removeIf(t -> t.id().equals(id));
     }
 
-    /*
-    @PostConstruct
-    private void init(){
-        tripsList.add(new Trip(1,
-                "First Trip",
-                Status.IDEA,
-                Type.WORK,
-                LocalDate.now(),
-                null,
-                ""));
-        tripsList.add(new Trip(2,
-                "Second Trip",
-                Status.IDEA,
-                Type.ADVENTURE,
-                LocalDate.now(),
-                null,
-                ""));
-    }
-    */
-
-
 }
